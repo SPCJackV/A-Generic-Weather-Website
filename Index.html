@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Generic Weather Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #weather {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>A Generic Weather Website</h1>
+    <p>Enter a city to get the current weather:</p>
+    <input type="text" id="city" placeholder="City Name">
+    <button onclick="getWeather()">Get Weather</button>
+    <div id="weather"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+<h3>Live Weather Radio</h3>
+<audio controls>
+    <source src="https://stream.weatherusa.net:8443/test.aac" type="audio/aac">
+    Your browser does not support the audio element.
+</audio>
+
+<button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+<div id="forecast"></div>
+
+
+<button onclick="saveFavoriteCity(document.getElementById('city').value)">Save as Favorite</button>
+<div id="favorites"></div>
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h1 class="text-center">Weather Website</h1>
+            <div class="input-group mb-3">
+                <input type="text" id="city" class="form-control" placeholder="City Name">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" onclick="getWeather()">Get Weather</button>
+                    <button class="btn btn-secondary" onclick="saveFavoriteCity(document.getElementById('city').value)">Save as Favorite</button>
+                </div>
+            </div>
+            <div id="weather" class="text-center"></div>
+            <div id="forecast" class="mt-4"></div>
+            <h3>Favorite Cities:</h3>
+            <div id="favorites"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'YOUR_TRACKING_ID');
+</script>
+
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
