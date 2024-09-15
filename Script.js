@@ -36,7 +36,7 @@ function toggleDarkMode() {
 
 
 async function getWeatherByCoords(lat, lon) {
-    const apiKey = 'YOUR_API_KEY';
+    const apiKey = '3746ad9b2aeb953b117a94ca8d578e56';
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
     try {
