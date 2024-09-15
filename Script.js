@@ -101,7 +101,7 @@ async function getWeatherForecast(city) {
         const response = await fetch(url);
         const data = await response.json();
         const forecastDiv = document.getElementById('forecast');
-        forecastDiv.innerHTML = '';
+        forecastDiv.innerHTML = 'Your weather forecast';
 
         data.list.forEach((item) => {
             const date = new Date(item.dt * 1000).toLocaleDateString();
@@ -138,7 +138,7 @@ function saveFavoriteCity(city) {
 function displayFavoriteCities() {
     const favoritesDiv = document.getElementById('favorites');
     let favorites = JSON.parse(localStorage.getItem('favoriteCities')) || [];
-    favoritesDiv.innerHTML = '';
+    favoritesDiv.innerHTML = 'List of your favorite cites.';
 
     favorites.forEach(city => {
         favoritesDiv.innerHTML += `<button onclick="getWeather('${city}')">${city}</button>`;
@@ -158,7 +158,7 @@ function setWeatherBackground(weather) {
     } else if (weather.includes('sun')) {
         document.body.className = 'sunny';
     } else {
-        document.body.className = '';
+        document.body.className = 'Weather Forecast';
     }
 }
 
